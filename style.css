@@ -1,0 +1,137 @@
+@media only screen and (max-width: 767px) {
+  .top {
+    height: 70px;
+  }
+
+  .konten {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .name {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid black;
+}
+
+.UMN {
+  margin-top: 10px;
+}
+
+.dog {
+  margin-bottom: 10px;
+  height:  5%;
+  width: 5%;
+}
+
+.konten{
+    margin-top: -80px;
+}
+
+
+.isi {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 90vh;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -170px;
+    
+}
+
+#myImage {
+	margin: 10px 10px 10px 10px;
+	width: 300px; 
+	height: 300px;
+}
+
+#left, #right, img {
+	width: 80px;
+	height: 80px;
+    margin: 10px 10px 10px 10px;
+}
+
+#left:hover, #right:hover {
+	transform: scale(1.1);
+}
+
+.button {
+  appearance: button;
+  background-color: #2596be;
+  background-image: none;
+  border: 1px solid ;
+  border-radius: 4px;
+  box-shadow: #000000 4px 4px 0 0,#2596be 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:focus {
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button:not([disabled]):active {
+  box-shadow: #000000 2px 2px 0 0, #2596be 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+
+.input::placeholder{
+    color: #000000;
+    text-align: center;
+}
+
+input[type=text]{
+    border-color: #000000;
+    background-color: rgb(37, 150, 190);
+    width: 350px;
+    height: 25px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    margin-top: -15px;
+}

@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script src="index.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>UMN Gotcha | MID Exam</title>
+</head>
+<body>
+	<div class="top">
+		<img src="otherstuff/dog_footprint.png" class="dog">
+		<h2 class="UMN">UMN Gotcha</h2>
+	</div>
+
+	<div class="konten">
+		<div class="isi">
+			<img id="left" src="otherstuff/left-arrow.png" onclick="changeImage2()">
+			<img id="myImage" src="gambar/5.png">
+			<img id="right" src="otherstuff/right-arrow.png" onclick="changeImage()">
+		</div>
+		<div class="name" id="form">
+			<h4>Enter Name:</h4>
+			<form onsubmit="goToLink(); return false;">
+				<input type="text" placeholder="Enter Pet Name Here.." class="input" id="petName" style="text-align: center;">
+				<br><br>
+				<center>
+					<button type="submit" class="button">Play</button>
+				</center>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

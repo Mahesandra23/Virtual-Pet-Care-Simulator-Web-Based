@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+        <script src="index2.js"></script>
+        <title>UMN Gotcha | MID Exam</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      </head>
+      <body>
+        <div class="top">
+            <img src="otherstuff/dog_footprint.png" class="dog">
+            <h2 class="UMN">UMN Gotcha</h2>
+        </div>
+
+            <!-- Progress bar container -->
+            <div class="progress-bar-container">
+                <img class="icon" src="otherstuff/eat.png" alt="">
+                <div class="left-progress-bar w3-light-grey">
+                    <div id="makan" class="w3-container w3-red w3-center" style="width:20%">20%</div>
+                </div>
+                
+                <br>
+                <img class="icon" src="otherstuff/console.png" alt="">
+                <div class="right-progress-bar w3-light-grey">
+                    <div id="main" class="w3-container w3-blue w3-center" style="width:20%">20%</div>
+                </div>
+                
+                <br>
+                <img class="icon" src="otherstuff/sleeping.png" alt="">
+                <div class="left-progress-bar w3-light-grey">
+                    <div id="tidur" class="w3-container w3-yellow w3-center" style="width:20%">20%</div>
+                </div>
+                
+                <br>
+                <img class="icon" src="otherstuff/drugs.png" alt="">
+                <div class="right-progress-bar w3-light-grey">
+                    <div id="obat" class="w3-container w3-purple w3-center" style="width:20%">20%</div>
+                </div>
+                <br>
+                <div>
+                    <center class="level">Level 1</center>
+                </div>
+            </div>
+    
+            <div class="content">
+                <center><p class="greeting" id="greeting"></p><p id="nama"></p>
+                <p id="game-clock"></p></center>
+                <img class="avatar" id="avatar" src="gambar/1.png" alt="">
+            </div>
+
+            <!-- Tombol container -->
+            <div class="button-container">
+                <div class="left-container">
+                    <button class="button" onclick="makan();imagemakan();">Makan</button>
+                    <button class="button" id="masterButton" onclick="toggleButtons(); main();">Game</button>
+                </div>
+                <div class="right-container">
+                    <button class="button" onclick="tidur();imagetidur();">Tidur</button>
+                    <button class="button" onclick="obat();imageobat();">Obat</button>
+                </div>
+            </div>
+
+            <div class="hidden">
+                <button class="hidden" onclick="geserKiri()">Kiri</button>
+                <button class="hidden" onclick="geserAtas()">Atas</button>
+                <button class="hidden" onclick="geserBawah()">Bawah</button>
+                <button class="hidden" onclick="geserKanan()">Kanan</button>
+            </div>
+
+	<script>
+    let urlParams = new URLSearchParams(window.location.search);
+    let name = urlParams.get('name');
+    document.getElementById('nama').innerHTML = "Welcome, " + name + "!";
+
+    var gambar = document.getElementById('avatar');
+    var buttons = document.querySelectorAll('button');
+    var masterButton = document.getElementById('masterButton');
+    var hiddenButtons = document.querySelectorAll('.hidden');
+
+    function toggleButtons() {
+    for (var i = 0; i < hiddenButtons.length; i++) {
+        hiddenButtons[i].classList.toggle('hidden');
+    }
+    masterButton.innerHTML = hiddenButtons[0].classList.contains('hidden') ? 'Game' : 'Close';
+    }
+
+    function geserKiri() {
+    gambar.style.transform = 'translateX(-50px)';
+    }
+
+    function geserAtas() {
+    gambar.style.transform = 'translateY(-50px)';
+    }
+
+    function geserBawah() {
+    gambar.style.transform = 'translateY(50px)';
+    }
+
+    function geserKanan() {
+    gambar.style.transform = 'translateX(50px)';
+    }
+    </script>
+    </body>
+</html>    
